@@ -172,7 +172,7 @@ def main():
         }
 
     # Render header
-    st.markdown("# 🕕 九龍灣常悅道 出發 \n# 🚌 赤臘角機場 / 香港口岸")
+    st.markdown("# 🕕 常悅道 出發 \n# 🚌 機場 / 香港口岸")
 
     # Render timer
     with st.container():
