@@ -119,8 +119,8 @@ def build_route_comparison_table(route_pairs: list, route_api: dict) -> list:
                         "_eta2_dt": eta2_dt
                     })
 
-    # Sort by earliest ETA for Route 2
-    table.sort(key=lambda row: row.get("_eta2_dt") or datetime.max)
+    # Sort by earliest ETA for Route 2, then by earliest ETA to 常悅道
+    table.sort(key=lambda row: (row.get("_eta2_dt") or datetime.max, row.get("ETA to 常悅道") or ""))
     return [{k: v for k, v in row.items() if k != "_eta2_dt"} for row in table]
 
 
